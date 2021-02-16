@@ -6,13 +6,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
-          <a class="nav-link " href="{{route('home')}}">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link " href="{{route('home')}}">HOME<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item {{ Request::is('fruit') ? 'active' : '' }}">
           <a class="nav-link" href="{{route('fruit')}}">FRUITS</a>
         </li>
         <li class="nav-item {{ Request::is('legume') ? 'active' : '' }}">
           <a class="nav-link" href="{{route('legume')}}">LEGUMES</a>
+        </li>
+        <li class="nav-item {{ Request::is('login') ? 'active' : '' }}">
+          <a class="nav-link" href="{{route('login')}}">login</a>
         </li>
       </ul>
     </div>
