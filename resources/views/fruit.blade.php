@@ -1,4 +1,6 @@
 @extends('template.main')
 @section('content')
-    @include('partial.homecont')
+
+    @include('partial.fruitcont')
+
 @endsection
