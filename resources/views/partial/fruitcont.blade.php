@@ -5,6 +5,7 @@
         <div class="card-body">
           <h5 class="card-title">{{$fruit->name}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{$fruit->qantite}}</h6>
+          <td><a class="btn btn-success" href="">Show</a></td>
         </div>
     </div>
     @else
@@ -12,6 +13,7 @@
       <div class="card-body">
         <h5 class="card-title">{{$fruit->name}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{$fruit->qantite}}</h6>
+        <td><a class="btn btn-success" href="/fruit-show/{{$fruit->id}}">Show</a></td>
       </div>
   </div>
     @endif

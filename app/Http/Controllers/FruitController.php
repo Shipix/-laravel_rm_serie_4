@@ -11,4 +11,8 @@ class FruitController extends Controller
         $fruitdata=Fruit::all();
         return view ('fruit', compact('fruitdata'));
     }
+    public function show($id){
+        $show=Fruit::find($id);
+        return view ('show', compact('show'));
+    }
 }
