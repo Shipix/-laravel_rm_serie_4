@@ -3,11 +3,18 @@
 use App\Http\Controllers\AddFruitController;
 use App\Http\Controllers\AddLegumeController;
 use App\Http\Controllers\AdminController;
+
+use App\Http\Controllers\EditLegumeAdmin;
+use App\Http\Controllers\EditFruitAdmin;
+
 use App\Http\Controllers\FruitController;
 use App\Http\Controllers\FruitAdmController;
+
 use App\Http\Controllers\HomeController;
+
 use App\Http\Controllers\LegumeController;
 use App\Http\Controllers\LegumeAdmController;
+
 use App\Http\Controllers\LoginController;
 
 use Illuminate\Support\Facades\Route;
@@ -48,3 +55,8 @@ Route::post('/addfruit-store',[AddFruitController::class,'store']);
 Route::get('/addlegume',[AddLegumeController::class,'index'])->name('addlegume');
 Route::post('/addlegume-store',[AddLegumeController::class,'store']);
 
+Route::get('/editfruitadm/{id}',[EditFruitAdmin::class,'edit']);
+Route::post('/fruit-update/{id}',[EditFruitAdmin::class,'update']);
+
+Route::get('/editlegumeadm/{id}',[EditLegumeAdmin::class,'edit']);
+Route::post('/legume-update/{id}',[EditLegumeAdmin::class,'update']);

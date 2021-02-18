@@ -8,6 +8,8 @@
             <h6 class="card-subtitle mb-2 text-muted">{{$show->qantite}}</h6>
         </div>
     </div>
+
+    {{-- btn delete--}}
     @if (  Str::contains(url()->current(),"legume-showadm"))
 
     <form action="/legume-delete/{{$show->id}}"method="post">
@@ -22,5 +24,16 @@
       </form>
     @endif
 
+    {{-- btn edit--}}
+
+    @if (  Str::contains(url()->current(),"legume-showadm"))
+      <form >
+        <td><a class="btn btn-primary" href='/editlegumeadm/{{$show->id}}'>Edit</a></td>
+      </form>
+    @else
+      <form >
+        <td><a class="btn btn-primary" href='/editfruitadm/{{$show->id}}'>Edit</a></td>
+      </form>
+    @endif
     
 @endsection
